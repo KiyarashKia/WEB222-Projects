@@ -29,34 +29,39 @@ body {
 
 h1 {
   font-family: "degular", 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
-  font-size: 36px;
+  font-size: 50px;
   color: var(--text-color);
-  line-height: 1.0;
+  line-height: 0.8;
+  opacity: 80%;
+  margin-bottom: -5px;
 }
 
 h2 {
   font-family: "degular", 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
-  font-size: 26px; /* Adjusted for h2 */
+  font-size: 40px; /* Adjusted for h2 */
   color: var(--text-color);
+  opacity: 20%;
   line-height: 1.2; /* Adjusted line height */
 }
 
 h3 {
   font-family: "degular", 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
-  font-size: 22px; /* Adjusted for h3 */
+  font-size: 35px; /* Adjusted for h3 */
   color: var(--text-color);
   line-height: 1.2; /* Adjusted line height */
 }
 
 hr {
-  opacity: 0;
+  opacity: 5%;
 }
 
 p {
   font-family: "degular", 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
   font-size: 20px;
+  margin-bottom: 30px;
   color: var(--secondary-color);
-  line-height: 1.5; /* Adjusted line height */
+  line-height: 20px;
+  opacity: 80%;
 }
 
 .button {
@@ -103,6 +108,28 @@ p {
   font-family: "degular", 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
 }
 
+.urlButton {
+  width: 150px;
+  height: auto;
+  margin: 10px;
+  padding: 12px 12px 15px 15px;
+  background-color: var(--primary-color);
+  color: #1b1b1b;
+  border: none;
+  border-radius: 25px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.6s ease;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "degular", 'Montserrat', 'Helvetica Neue', Arial, sans-serif;;
+}
+
+.urlButton:hover {
+  background-color: var(--secondary-color);
+}
+
 .buttonStatic:hover {
   background-color: var(--secondary-color);
 }
@@ -132,7 +159,7 @@ p {
 .card-container {
   width: 80%;
   margin: 0 auto;
-  background-color: rgba(3, 3, 3, 0.164);
+  background-color: rgba(3, 3, 3, 0.11);
   padding: 30px;
   border-radius: 25px;
   box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.1), inset 0 -0px 10px #0a0a0a;

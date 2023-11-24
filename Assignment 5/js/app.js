@@ -33,7 +33,7 @@ function createSongCard(song) {
   card.appendChild(title);
 
     // Line Break
-    card.appendChild(document.createElement("br"));
+  card.appendChild(document.createElement("br"));
   
   // Length
   const length = document.createElement("span");
@@ -94,12 +94,13 @@ function displayArtistInfo(artistId) {
     artistInfo.appendChild(nameElement);
 
     artist.urls.forEach(url => {
-      const urlElement = document.createElement("a");
-      urlElement.href = url.url;
-      urlElement.textContent = url.name;
-      urlElement.target = "_blank";
-      artistInfo.appendChild(urlElement);
-      artistInfo.appendChild(document.createElement("br"));
+      const urlButton = document.createElement("button")
+      urlButton.className="urlButton";
+      urlButton.textContent = url.name;
+      urlButton.addEventListener("click", () => {
+        window.open(url.url, "_blank");
+      });
+      artistInfo.appendChild(urlButton);
     });
   }
 }
