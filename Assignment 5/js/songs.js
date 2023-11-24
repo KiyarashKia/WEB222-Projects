@@ -92,7 +92,7 @@ window.songs = [
     coverImageUrl: "https://i1.sndcdn.com/artworks-000652999720-ars5bm-t500x500.jpg",
     explicit: false
   },
-
+  
   // Songs 8-14 by Adele
   /* Song 8 */
   {
@@ -195,6 +195,7 @@ window.songs = [
     coverImageUrl: "https://i1.sndcdn.com/artworks-000206844384-uzp8t5-t500x500.jpg",
     explicit: false
   },
+  
   /* Song 17 */
   {
     songId: "SID-23267",
