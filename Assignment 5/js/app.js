@@ -23,12 +23,12 @@ function createSongCard(song) {
 
   // Add song cover image
   const coverImg = document.createElement("img");
-  coverImg.src = song.coverImageUrl || 'default-image-url'; // Add a default image URL if needed
+  coverImg.src = song.coverImageUrl || 'default';
   coverImg.alt = `Cover of ${song.title}`;
   card.appendChild(coverImg);
 
   // Song Title
-  const title = document.createElement("h2");
+  const title = document.createElement("h5");
   title.textContent = song.title;
   card.appendChild(title);
 
@@ -55,18 +55,18 @@ function createSongCard(song) {
 
 
 function listSongs(artistId) {
-  const songsContainer = document.querySelector(".card-container"); // Use class selector
-  songsContainer.innerHTML = ''; // Clear existing content
+  const songsContainer = document.querySelector(".card-container");
+  songsContainer.innerHTML = '';
 
   let songsByArtist = songs.filter((song) => song.artistId === artistId);
   songsByArtist.forEach((song) => {
     const songCard = createSongCard(song);
+    songCard.addEventListener("click", () => window.open(song.url, "_blank"));
     songsContainer.appendChild(songCard);
   });
 }
 
 function listArtists(artists) {
-  // Assuming there's a menu element where artist buttons will be added
   const menu = document.getElementById("menu");
   menu.innerHTML = '';
 
@@ -83,7 +83,6 @@ function listArtists(artists) {
 }
 
 function displayArtistInfo(artistId) {
-  // Adjusted to use only one artist-info section
   const artistInfo = document.getElementById("artist-info");
   artistInfo.innerHTML = '';
 

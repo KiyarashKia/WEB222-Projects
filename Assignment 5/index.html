@@ -2,12 +2,14 @@
 <html lang="en-CA">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=500, initial-scale=1" />
-
+    <meta name="viewport" content="width=500, initial-scale=1.0">    <meta name="description" content="Free Web tutorials">
+    <meta name="description" content="All content are designed and implemented
+    by Kiarash Kia. This includes index.html, songs.js, app.js, artists.js and Music.css">
+    
     <!-- Change this to your name-->
     <meta name="author" content="Kiarash Kia" />
 
-    <title>My WEB222 Music App</title>
+    <title>Rhytmify WEB222</title>
     <!-- Font-->
     <link rel="stylesheet" href="https://use.typekit.net/rqc4sna.css">
     <!-- Classless CSS Stylesheet - https://watercss.kognise.dev/ -->
@@ -19,12 +21,9 @@
     <header>
       <!-- Change this to your App's info -->
       <h1>
-        <span style="color: #242424;">R</span><span style="color: #333333;">Я</span><br>
-        <span style="color: #e49e1b;">R</span><span style="font-size: 70%;">hytm</span><span style="color: #e49e1b;">R</span><span style="font-size: 70%;">ise</span>
-      </h1>
-      
-      
-      <p>&nbsp;A Harmonious Journey Through the World of Pop Music</p>
+        <a href="/index.html" > <img src="/media/headlogo.svg" alt="Rhythmify Logo"></h1>
+        </a>
+      <p>&nbsp;&nbsp;&nbsp;Discover the Rhytm</p>
     </header>
 
 
@@ -37,12 +36,14 @@
     </div>
     
 
-    <hr />
+    <hr>
     <div id="artist-info">
-      <h2 id="artists">
-        <!-- Dynamically update the selected category title -->
-      </h2>
+      <h2 id="artists"> </h2>
+      <div class="buttonContainer">
+        <!-- Dynamically added URL buttons will go here -->
+      </div>
     </div>
+    
 
     <main>
 
@@ -62,7 +63,7 @@
   <!-- First card -->
   <div class="songs-card">
     <img src="" alt="Song/Artist Image">
-    <h2>Song Name</h2>
+    <h5>Song Name</h5>
     <time>Year Recorded: <br></time>
     <br>
     <span><b>Duration:</b> </span>
@@ -70,6 +71,13 @@
   </div>
 </div>
 
+</div>
+
+    <!-- Footer --> 
+    <footer id="footer">
+      <span>-&nbsp;This project has been designed and created by Kiarash Kia&nbsp;-<br><br></span>
+      <span>Seneca Polytechnic<br>Winter 2023<br>Ver 1.0</span>
+  </footer>
 
     <!-- JavaScript Data Files -->
     <script src="./js/artists.js"></script>

@@ -1,5 +1,5 @@
 :root {
-  --primary-bg-color: #131313;
+  --primary-bg-color: #0f0f0f;
   --primary-color: #ecae3c;
   --secondary-color: #ffa600;
   --text-color: #ffffff;
@@ -10,15 +10,17 @@
 body {
   background-color: var(--primary-bg-color);
   font-family: "degular", 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
-  margin: 25px;
-  padding: 6px;
+  margin: 20px;
+  margin-top: 5px;
+  padding: 20px;
+  padding-top: 5px;
   padding-left: 100px;
   padding-right: 100px;
   color: var(--text-color);
 }
 
 #menu {
-  text-align: center; /* Centers inline or inline-block elements within */
+  text-align: center;
 }
 
 .container {
@@ -34,34 +36,66 @@ h1 {
   line-height: 0.8;
   opacity: 80%;
   margin-bottom: -5px;
+  padding-bottom: 0;
 }
 
+
 h2 {
-  font-family: "degular", 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
-  font-size: 40px; /* Adjusted for h2 */
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 40px;
+  color: #c0984d;
+  opacity: 70%;
+  line-height: 1.0;
+  text-align: center;
+  letter-spacing: 40px;
+  text-transform: uppercase;
+  margin-right: -8px;
+}
+
+h5 {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 20px;
   color: var(--text-color);
-  opacity: 20%;
-  line-height: 1.2; /* Adjusted line height */
+  opacity: 70%;
+  line-height: 0;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 h3 {
   font-family: "degular", 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
-  font-size: 35px; /* Adjusted for h3 */
+  font-size: 35px;
   color: var(--text-color);
-  line-height: 1.2; /* Adjusted line height */
+  line-height: 1.2;
 }
 
 hr {
-  opacity: 5%;
+  width: 30%;
+  opacity: 40%;
+  margin-top: 20px;
+  margin-right: 600px;
+  border-color: #c0984d;
 }
+
+header h1 img {
+  display: block;
+  max-width: 250px;
+  max-height: 200px auto;
+}
+
 
 p {
   font-family: "degular", 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
-  font-size: 20px;
+  font-size: 11px;
+  font-weight: 520;
   margin-bottom: 30px;
-  color: var(--secondary-color);
-  line-height: 20px;
-  opacity: 80%;
+  margin-top: 5px;
+  color: #c0984d;
+  line-height: 0px;
+  opacity: 100%;
+  text-indent: 128px;
 }
 
 .button {
@@ -73,8 +107,8 @@ p {
   margin-left: 30px;
   display: inline-block;
   padding: 12px 12px 15px 15px;
-  background-color: var(--primary-color);
-  color: #1b1b1b;
+  background-color: #1b1b1b;
+  color: #585858;
   border: none;
   border-radius: 25px;
   text-align: center;
@@ -84,7 +118,10 @@ p {
   font-size: 20px;
   font-weight: bold;
   font-family: "degular", 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  transition: transform 0.5s ease, background-color 0.5s ease;
 }
+
+
 
 .buttonStatic {
   width: 115px;
@@ -95,8 +132,8 @@ p {
   margin-left: 30px;
   display: inline-block;
   padding: 12px 12px 15px 15px;
-  background-color: var(--primary-color);
-  color: #1b1b1b;
+  background-color: #1b1b1b;
+  color: #585858;
   border: none;
   border-radius: 25px;
   text-align: center;
@@ -106,42 +143,70 @@ p {
   font-size: 20px;
   font-weight: bold;
   font-family: "degular", 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  transition: transform 0.5s ease, background-color 0.5s ease;
 }
 
 .urlButton {
+  justify-content: center;
   width: 150px;
   height: auto;
-  margin: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
   padding: 12px 12px 15px 15px;
-  background-color: var(--primary-color);
-  color: #1b1b1b;
+  background-color: #1b1b1b;
+  color: #585858;
   border: none;
   border-radius: 25px;
   text-align: center;
-  text-decoration: none;
-  transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease, width 1.7s ease;
   cursor: pointer;
   font-size: 20px;
   font-weight: bold;
   font-family: "degular", 'Montserrat', 'Helvetica Neue', Arial, sans-serif;;
 }
 
+#artist-info {
+  text-align: center;
+  display: block;
+justify-content: center;
+flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
 .urlButton:hover {
   background-color: var(--secondary-color);
+  color: rgb(37, 37, 37);
+width: 300px;
+  transition: width 0.8s, background-color 0.3s ease;
 }
 
 .buttonStatic:hover {
   background-color: var(--secondary-color);
+  color: rgb(37, 37, 37);
+  transform: scale(1.1);
+  transition: transform 0.5s ease, background-color 0.5s ease;
 }
 
 .button:hover {
   background-color: var(--secondary-color);
+  color: rgb(37, 37, 37);
+  transform: scale(1.1);
+  transition: transform 0.5s ease, background-color 0.5s ease;
 }
 
 .buttonArea {
   width: 50% auto;
   margin: 10px auto;
   justify-content: center;
+  align-items: center;
   border-radius: 50px;
   background-color: #f2f2f207; /* Example background color */
   padding: 10px; /* Example padding */
@@ -159,13 +224,13 @@ p {
 .card-container {
   width: 80%;
   margin: 0 auto;
-  background-color: rgba(3, 3, 3, 0.11);
+  background-color: #0303031c;
   padding: 30px;
   border-radius: 25px;
   box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.1), inset 0 -0px 10px #0a0a0a;
   display: grid;
    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Search case */
-   gap: 28px;
+   gap: 30px;
   justify-content: center;
 }
 
@@ -173,7 +238,7 @@ p {
   background: var(--card-bg-color);
   border-radius: 12px;
   text-align: center;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 2px 12px rgb(70, 70, 70);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 2px 12px rgb(54, 54, 54);
   transition: transform 0.3s, box-shadow 0.3s;
   display: flex;
   flex-direction: column;
@@ -181,6 +246,7 @@ p {
   width: 230px;
   height: 380px;
   margin: 14px;
+  cursor: pointer;
 }
 
 .songs-card img {
@@ -190,11 +256,11 @@ p {
   object-fit: cover;
   border-radius: 12px 12px 0 0;
   clip-path: ellipse(115% 87% at 20% 10%);
-  transition: transform 1s, clip-path 0.4s, filter 1.2s;
+  transition: transform 1s, clip-path 0.4s, filter 1.2s, scale 1s ease;
 }
 
 .songs-card h2 {
-  font-size: 20px; /* Adjusted font size for card title */
+  font-size: 20px;
   color: var(--text-color);
   margin: 14px;
   text-overflow: ellipsis;
@@ -202,16 +268,17 @@ p {
 }
 
 .songs-card time {
-  font-size: 14px; /* Adjusted font size for time */
+  font-size: 17px;
   font-weight: bold;
   color: var(--primary-color);
-  margin: 6px 12px;
+  margin: 1px 12px;
   text-overflow: ellipsis;
   white-space: nowrap;
+  opacity: 80%;
 }
 
 .songs-card span {
-  font-size: 16px; /* Adjusted font size for span */
+  font-size: 20px;
   color: var(--secondary-text);
   margin: 2px 12px;
   text-overflow: ellipsis;
@@ -224,10 +291,36 @@ p {
 }
 
 .songs-card:hover img {
+  scale: 1.08;
   clip-path: ellipse(100% 100% at 50% 40%);
   filter: grayscale(0);
-  transition: clip-path 1.5s;
+  transition: clip-path 1.5s, filter .5s ease-in, scale 1.5s ease;
 }
+
+#footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#footer span {
+  text-align: center;
+  color: var(--secondary-text);
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 0.6;
+  margin: 10px 0;
+  padding: 20px 0;
+  transition: color 2s ease;
+}
+
+#footer span:hover {
+color: #ffa600;
+transition: color 2s ease;
+cursor: alias;
+
+}
+
 
 
 /* Media queries */
@@ -242,16 +335,31 @@ p {
     padding: 5px 10px; /* Reduced padding */
     font-size: 14px; /* Smaller font size */
   }
+  header h1 {
+    margin-bottom: 0;
+  }
+  p {
+    letter-spacing: 0px;
+  }
 }
 
 @media (max-width: 576px) {
   body {
     padding: 6px;
   }
+  p {
+    letter-spacing: 0px;
+  }
 }
 
 @media (max-width: 414px) {
   body {
     padding: 4px;
+  }
+  header h1 img {
+    max-width: 250px auto;
+  }
+  p {
+    letter-spacing: 0px;
   }
 }
