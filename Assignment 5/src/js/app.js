@@ -15,6 +15,19 @@
 
 // All of our data is available on the global `window` object.
 // Create local variables to work with it in this file.
+
+window.addEventListener('load', function () {
+  setTimeout(function () {
+    // Hide the loading spinner
+    var loadingSpinner = document.getElementById('loading-spinner');
+    loadingSpinner.style.display = 'none';
+
+    // Show the page content
+    var content = document.getElementById('content');
+    content.style.display = 'block';
+  }, 3000);
+});
+
 const { artists, songs } = window;
 
 function createSongCard(song) {

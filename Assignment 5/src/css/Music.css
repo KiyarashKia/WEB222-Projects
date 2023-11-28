@@ -34,6 +34,25 @@ body {
   color: var(--text-color);
 }
 
+.loading-spinner {
+  background-color: rgba(0, 0, 0, 0.95);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-spinner img {
+  scale: 0.7;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
 #menu {
   text-align: center;
 }
