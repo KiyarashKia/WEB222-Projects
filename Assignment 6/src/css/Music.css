@@ -219,6 +219,15 @@ p {
   font-family: 'degular', 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
 }
 
+.urlButton:hover {
+  background-color: var(--secondary-color);
+  color: rgb(37, 37, 37);
+  width: 300px;
+  transition:
+    width 0.8s,
+    background-color 0.3s ease;
+}
+
 #artist-info {
   text-align: center;
   display: block;
@@ -232,15 +241,6 @@ p {
   display: flex;
   justify-content: center;
   gap: 10px;
-}
-
-.urlButton:hover {
-  background-color: var(--secondary-color);
-  color: rgb(37, 37, 37);
-  width: 300px;
-  transition:
-    width 0.8s,
-    background-color 0.3s ease;
 }
 
 .buttonStatic:hover {
@@ -267,8 +267,8 @@ p {
   justify-content: center;
   align-items: center;
   border-radius: 50px;
-  background-color: #f2f2f207; /* Example background color */
-  padding: 10px; /* Example padding */
+  background-color: #f2f2f207;
+  padding: 10px;
   padding-bottom: 18px;
   padding-top: 0px;
   text-align: center;
@@ -350,7 +350,7 @@ p {
   color: var(--secondary-text);
   margin: 2px 12px;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  align-items: center;
 }
 
 .songs-card:hover {
@@ -368,36 +368,104 @@ p {
     scale 1.5s ease;
 }
 
-#footer {
-  text-align: center;
-  margin-top: 20px;
+.footer-container {
+  margin: 20px auto;
+  background-color: #f2f2f207;
+  padding: 30px;
+  border-radius: 50px;
+  box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.1);
+  display: block;
 }
 
-#footer span {
+#newsletter {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: large;
+}
+
+#newsletter {
+  flex: 1;
+}
+
+#newsletter .email-form {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+#newsletter input {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(240, 240, 240, 0.4);
+  background-color: #161616;
+  color: #cecece;
+  font-family: 'degular', 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1em;
+}
+
+#email::placeholder {
+  font-size: 16px;
+  align-items: center;
+}
+
+#newsletter button.newsletter {
+  padding-top: 10px;
+  padding-bottom: 12px;
+  margin: auto;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: 'degular', 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 19px;
+  width: 100px;
   text-align: center;
+  transition:
+    border-radius 1s ease,
+    background-color 0.6s ease;
+}
+
+#newsletter button.newsletter:hover {
+  background-color: var(--secondary-color);
+  color: rgb(37, 37, 37);
+  border-radius: 10px;
+  font-weight: bold;
+  transition:
+    border-radius 0.7s ease,
+    background-color 0.3s ease;
+}
+
+#footer {
+  display: flex;
+  margin: 20px;
+  padding: 5px;
+  text-align: left;
+}
+
+.footer-info span {
   color: #585858;
   font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
   font-weight: bold;
-  line-height: 0.6;
-  margin: 10px 0;
-  padding: 20px 0;
+  line-height: 1;
   transition: color 2s ease;
 }
 
 #footer span:hover {
   color: #ffa600;
   transition: color 2s ease;
-  cursor: alias;
+  cursor: default;
 }
 
 #honesty p {
-  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif; /* Adjust the font family as needed */
-  font-size: 18px; /* Adjust the font size as needed */
-  color: var(--secondary-text); /* Using the secondary text color from your color scheme */
-  line-height: 1.5; /* Line height for better readability */
-  text-align: center; /* Justify the text for a clean, aligned look */
-  margin-top: 15px; /* Add some space around the paragraph */
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 18px;
+  color: var(--secondary-text);
+  line-height: 1.5;
+  text-align: center;
+  margin-top: 15px;
   display: inline;
   line-height: 30px;
 }

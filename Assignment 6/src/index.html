@@ -45,6 +45,9 @@
       <img src="./media/output-onlinegiftools (4).gif" />
   </div>
 
+
+  <div id="content" style="display: block;">
+
     <header>
       <!-- Change this to your App's info -->
       <h1>
@@ -103,11 +106,25 @@
 
 </div>
 
-    <!-- Footer --> 
-    <footer id="footer">
-      <span>-&nbsp;This project has been designed and created by Kiarash Kia&nbsp;-<br><br></span>
-      <span>Seneca Polytechnic<br>Winter 2023<br>Ver 1.0</span>
+<!-- Footer -->
+<div class="footer-container">
+  <footer id="footer">
+      <!-- Newsletter Form  -->
+      <form id="newsletter" action="https://httpbin.org/post" method="post">
+          <label for="email"><i class="fa-solid fa-paper-plane"></i>&nbsp;&nbsp;Join Our Newsletter!</label><br>
+          <div class="email-form">
+              <input id="email" type="email" name="email" placeholder="john.smith@youremail.com">
+              <button class="newsletter" type="submit"><i class="fa-solid fa-paper-plane"></i>Send</button>
+          </div>
+      </form>
+
+      <!-- Footer Statement -->
+      <div class="footer-info">
+        <span>This project has been designed and created by Kiarash Kia<br>Seneca Polytechnic Winter 2023 Ver 1.0</span>
+    </div>
   </footer>
+</div>
+</div>
 
     <!-- JavaScript Data Files -->
     <script src="./js/artists.js"></script>

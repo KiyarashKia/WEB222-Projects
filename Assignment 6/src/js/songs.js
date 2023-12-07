@@ -68,7 +68,7 @@ window.songs = [
     duration: 284, // 4:44 m
     url: 'https://www.youtube.com/watch?v=8jzDnsjYv9A',
     coverImageUrl:
-      'https://swahilisongs.com/wp-content/uploads/2023/06/artworks-000131374000-sr9zyq-t500x500.jpg',
+      'https://api.time.com/wp-content/uploads/2015/09/sam-smith-writings-on-the-wall-cover.jpg',
     explicit: false
   },
   /* Song 6 */
