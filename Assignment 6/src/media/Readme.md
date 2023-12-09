@@ -9,5 +9,3 @@
           - All Media related to the Rhytmify name, such as versions of logos and fav icon are
           created by <a href="https://github.com/KiyarashKia/" target="_blank">Kiarash Kia</a> on 25
           Nov, 2023. All rights reserved<br />
-
-        </p>
