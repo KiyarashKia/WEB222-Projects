@@ -1,6 +1,6 @@
 
-<h7><strong>Citation and Important note</strong><br /><br /></h7>
-        <p>
+<h6><strong>Citation and Important note</strong><br /><br /></h6>
+        
           - All images are from open license sources and are official cover images of songs that are
           already released.<br /><br />
           - The Logo of Rhytmify is entirely unique and is
