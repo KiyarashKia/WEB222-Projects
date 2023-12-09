@@ -15,6 +15,7 @@
 
 // All of our data is available on the global `window` object.
 // Create local variables to work with it in this file.
+const { artists, songs } = window;
 
 window.addEventListener('load', function () {
   setTimeout(function () {
@@ -32,7 +33,6 @@ window.addEventListener('load', function () {
   }, 1700);
 });
 
-const { artists, songs } = window;
 
 function createSongCard(song) {
   const card = document.createElement('div');
@@ -119,21 +119,19 @@ function displayArtistInfo(artistId) {
       });
     }
   } else {
-    console.log('Artist info element not found');
+         const firstArtistId = artists[0].artistId;
+    displayArtistInfo(firstArtistId);
+    listSongs(firstArtistId);
+
   }
 }
 function onLoad() {
   listArtists(artists);
-  const pathname = window.location.pathname;
 
-  if (pathname.endsWith('index.html') || pathname === '/') {
-    listArtists(artists);
-
-    if (artists.length > 0) {
-      const firstArtistId = artists[0].artistId;
-      displayArtistInfo(firstArtistId);
-      listSongs(firstArtistId);
-    }
+  if (artists.length > 0) {
+    const firstArtistId = artists[0].artistId;
+    displayArtistInfo(firstArtistId);
+    listSongs(firstArtistId);
   }
 }
 

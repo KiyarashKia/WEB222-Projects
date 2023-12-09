@@ -1,0 +1,207 @@
+<!-- 
+  WEB222 – Assignment 06
+
+  I declare that this assignment is my own work in accordance with
+  Seneca Academic Policy. No part of this assignment has been
+  copied manually or electronically from any other source
+  (including web sites) or distributed to other students.
+
+  Please update the following with your information:
+
+  Name:       Kiarash Kia
+  Student ID: 108688235
+  Date:       12/08/2023
+-->
+
+<!doctype html>
+<html lang="en-CA">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=500, initial-scale=1.0">
+    <meta name="description" content="All content are designed and implemented
+    by Kiarash Kia. This includes index.html, songs.js, app.js, artists.js and Music.css.
+    Also the Rhytmify name and Logo are designed and made by Kiarash Kia. 25 Nov 2023">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+
+
+    <!-- Change this to your name-->
+    <meta name="author" content="Kiarash Kia" />
+
+    <link rel="icon" type="image/x-icon" href="media/fav2.ico" />
+
+
+    <title>Rhytmify WEB222</title>
+    <!-- Font-->
+    <link rel="stylesheet" href="https://use.typekit.net/rqc4sna.css">
+    <!-- Classless CSS Stylesheet - https://watercss.kognise.dev/ -->
+    <link rel="stylesheet" href="./css/Music.css" />
+
+
+  </head>
+  <body>
+
+    <div class="loading-spinner" id="loading-spinner">
+      <img src="./media/Interwind-1s-394px.svg" />
+      </div>
+
+
+  <div id="content" style="display: block;">
+
+    <header>
+      <!-- Change this to your App's info -->
+      <h1>
+        <a href="./index.html">
+          <img src="./media/headlogo.svg" alt="Rhythmify Logo">
+        </a>
+      </h1>
+      <p>&nbsp;&nbsp;&nbsp;Discover the Rhythm</p>
+    </header>
+    
+
+
+    <div class="buttonArea">
+      <a href="./documentation.html" target="_self"><button class="buttonStatic">About</button></a>
+      <nav id="menu">
+        <!-- Dynamically create your menu category buttons here -->
+      </nav>
+      <a href="./new.html" target="_self"><button class="buttonStatic">Add Artist</button></a>
+      <a href="./honesty.html" target="_self"><button class="buttonStatic">Honesty</button></a>
+    </div>
+    
+
+      
+
+
+    
+<!-- Card Container -->
+<div class="card-container">
+
+  <div class="request-artist">
+    <form id="request" action="https://httpbin.org/post" method="post">
+
+            <fieldset id="fieldset">
+                <legend>Request New Artist</legend>
+                <label for="name">Artist Name</label>
+                <input required type="text" id="name" name="name" placeholder="The Weeknd" required><br><br>
+                <label for="genre">Genre</label>
+                <select name="genre" id="genre"required><br><br>
+                    <option value="Rap">Rap</option>
+                    <option value="Hip-Hop">Hip-Hop</option>
+                    <option value="R&B">R&amp;B</option>
+                    <option value="Jazz">Jazz</option>
+                </select>
+                <input type="checkbox" id="explicit" name="explicit" value="explicit">
+                <label for="explicit"> Explicit Lyrics?</label><br><br>
+                <label for="socials">Socials</label>
+                <input type="text" id="socials" name="socials" placeholder="instagram, youtube links"><br><br>
+                <label for="socials">Songs</label>
+                <div id="songs-list">
+                    <input required type="text" id="songs" name="songs" placeholder="Heartless"><button type="button" id="requestButton" onclick="changeButtonToAdded(this)">Add</button><br><br>
+
+                </div>
+                <label for="review">Review of Artist</label></p>
+                <textarea required id="review" name="review" rows="4" cols="50" placeholder="Start writing here .."></textarea>
+                <button type="submit" id="SendButton" onclick="changeButtonToDone(this)">
+                  Send</button>
+            </fieldset>
+    </form>
+</div>
+</div>
+
+<!-- Footer -->
+<div class="footer-container">
+  <footer id="footer">
+      <!-- Newsletter Form  -->
+      <form id="newsletter" action="https://httpbin.org/post" method="post">
+          <label for="email"><i class="fa-solid fa-paper-plane"></i>&nbsp;&nbsp;Join Our Newsletter!</label><br>
+          <div class="email-form">
+              <input id="email" type="email" name="email" placeholder="john.smith@youremail.com">
+              <button class="newsletter" type="submit" onclick="changeButtonToSent(this)">Send</button>
+          </div>
+      </form>
+
+      <!-- Footer Statement -->
+      <div class="footer-info">
+        <span>This project has been designed and created by Kiarash Kia<br>Seneca Polytechnic Winter 2023 Ver 1.0</span>
+    </div>
+  </footer>
+</div>
+</div>
+
+    <!-- JavaScript Data Files -->
+    <script src="./js/artists.js"></script>
+    <script src="./js/songs.js"></script>
+    <!-- Main App JavaScript File -->
+    <script src="./js/app.js"></script>
+    <script src="./js/form.js"></script>
+
+    <!-- Additional Scripts for more interactive buttons-->
+
+    <script>
+      function changeButtonToDone(button) {
+  
+          const originalContent = button.innerHTML;
+          const originalBackgroundColor = button.style.backgroundColor;
+          const originalTextColor = button.style.color;
+          const originalFontSize = button.style.fontSize;
+      
+          button.innerHTML = 'Processing';
+          button.style.backgroundColor = 'green';
+          button.style.color = 'white';
+          button.style.transition = 'background-color 0.4s ease';
+          button.style.fontSize = '18px';
+      
+          setTimeout(function() {
+              button.innerHTML = originalContent;
+              button.style.backgroundColor = originalBackgroundColor;
+              button.style.color = originalTextColor;
+              button.style.fontSize = originalFontSize;
+          }, 2000);
+  
+  
+      }
+      </script>
+  
+  <script>
+    function changeButtonToAdded(button) {
+  
+        const originalContent = button.innerHTML;
+        const originalBackgroundColor = button.style.backgroundColor;
+        const originalTextColor = button.style.color;
+    
+        button.innerHTML = 'Added';
+        button.style.backgroundColor = '#069b03';
+        button.style.transition = 'background-color 0.4s ease';
+        button.style.color = 'white';
+    
+        setTimeout(function() {
+            button.innerHTML = originalContent;
+            button.style.backgroundColor = originalBackgroundColor;
+            button.style.color = originalTextColor;
+        }, 750);
+    }
+    </script>
+  
+  <script>
+    function changeButtonToSent(button) {
+  
+        const originalContent = button.innerHTML;
+        const originalBackgroundColor = button.style.backgroundColor;
+        const originalTextColor = button.style.color;
+    
+        button.innerHTML = 'Sent !';
+        button.style.backgroundColor = '#069b03';
+        button.style.color = 'white';
+    
+        setTimeout(function() {
+            button.innerHTML = originalContent;
+            button.style.backgroundColor = originalBackgroundColor;
+            button.style.color = originalTextColor;
+        }, 750);
+    }
+    </script>
+
+
+  </body>
+</html>

@@ -13,52 +13,38 @@
   Date:       12/08/2023
 -->
 
-
 <!doctype html>
 <html lang="en-CA">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=500, initial-scale=1.0">
-    <meta name="description" content="All content are designed and implemented
-    by Kiarash Kia. This includes index.html, songs.js, app.js, artists.js and Music.css.
-    Also the Rhytmify name and Logo are designed and made by Kiarash Kia. 25 Nov 2023">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-
-
-    <!-- Change this to your name-->
+    <meta name="viewport" content="width=500, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="All content are designed and implemented by Kiarash Kia. This includes index.html, songs.js, app.js, artists.js and Music.css"
+    />
     <meta name="author" content="Kiarash Kia" />
 
-    <link rel="icon" type="image/x-icon" href="./media/fav.ico" />
-
+    <link rel="icon" type="image/x-icon" href="media/fav2.ico" />
 
     <title>Rhytmify WEB222</title>
-    <!-- Font-->
-    <link rel="stylesheet" href="https://use.typekit.net/rqc4sna.css">
-    <!-- Classless CSS Stylesheet - https://watercss.kognise.dev/ -->
+
+    <link rel="stylesheet" href="https://use.typekit.net/rqc4sna.css" />
     <link rel="stylesheet" href="./css/Music.css" />
-
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   </head>
+
   <body>
 
     <div class="loading-spinner" id="loading-spinner">
       <img src="./media/Interwind-1s-394px.svg" />
-  </div>
-
-
-  <div id="content" style="display: block;">
-
+      </div>
+      
     <header>
-      <!-- Change this to your App's info -->
       <h1>
-        <a href="./index.html">
-          <img src="./media/headlogo.svg" alt="Rhythmify Logo">
-        </a>
+        <a href="./index.html"><img src="./media/headlogo.svg" alt="Rhythmify Logo" /></a>
       </h1>
       <p>&nbsp;&nbsp;&nbsp;Discover the Rhythm</p>
     </header>
-    
-
 
     <div class="buttonArea">
       <a href="./documentation.html" target="_self"><button class="buttonStatic">About</button></a>
@@ -68,44 +54,40 @@
       <a href="./new.html" target="_self"><button class="buttonStatic">Add Artist</button></a>
       <a href="./honesty.html" target="_self"><button class="buttonStatic">Honesty</button></a>
     </div>
-    
 
-    <hr>
-    <div id="artist-info">
-      <h2 id="artists"> </h2>
-      <div class="buttonContainer">
-        <!-- Dynamically added URL buttons will go here -->
-      </div>
+    <hr />
+
+    <div class="card-container">
+      <section id="honesty">
+        <h7>About the work<br /><br /></h7>
+        <p>
+          I declare that my assignment is wholly my own work in accordance with Seneca Academic
+          Policy. No part of this assignment has been copied manually or electronically from any
+          other source (including web sites) except for the information supplied by the WEB222
+          instructors and / or made available in this assignment for my use. I also declare that no
+          part of this assignment has been distributed to other students.
+          <br /><br />
+        </p>
+
+        <h7>Citation<br /><br /></h7>
+        <p>
+          - All images are from open license sources and are official cover images of songs that are
+          already released.<br /><br />
+          - The Logo of <a href="/index.html" target="_blank">Rhytmify</a> is entirely unique and is
+          created by <a href="https://github.com/KiyarashKia/" target="_blank">Kiarash Kia</a> on 25
+          Nov, 2023.<br />
+          <br />- The font used in this work is degular. The creator is
+          <a href="https://fonts.adobe.com/designers/james-edmondson" target="_blank"
+            >James Edmondson</a
+          >
+          from
+          <a href="https://fonts.adobe.com/foundries/oh-no-type-co" target="_blank"
+            >OH No Type Co.</a
+          >
+          <br /><br />
+        </p>
+      </section>
     </div>
-    
-
-    <main>
-
-      <table>
-        <thead id="header">
-          <!-- Statically create the headings for your table here -->
-        </thead>
-        <tbody id="songs">
-          <!-- Dynamically create your product rows here -->
-        </tbody>
-      </table>
-    </main>
-    
-<!-- Card Container -->
-<div class="card-container">
-
-  <!-- First card -->
-  <div class="songs-card">
-    <img src="" alt="Song/Artist Image">
-    <h5>Song Name</h5>
-    <time>Year Recorded: <br></time>
-    <br>
-    <span><b>Duration:</b> </span>
-    <br><br>
-  </div>
-</div>
-
-</div>
 
 <!-- Footer -->
 <div class="footer-container">
@@ -127,21 +109,16 @@
 </div>
 </div>
 
-
-    <!-- JavaScript Data Files -->
+    <script src="./js/form.js"></script>
     <script src="./js/artists.js"></script>
     <script src="./js/songs.js"></script>
-
-    <!-- Main App JavaScript File -->
     <script src="./js/app.js"></script>
-    <script src="./js/form.js"></script>
 
-
-<!-- Additional Scripts for more interactive buttons-->
+    <!-- Additional Scripts for more interactive buttons-->
 
 <script>
   function changeButtonToSent(button) {
-
+  
       const originalContent = button.innerHTML;
       const originalBackgroundColor = button.style.backgroundColor;
       const originalTextColor = button.style.color;
@@ -157,7 +134,5 @@
       }, 750);
   }
   </script>
-
-
   </body>
 </html>
